@@ -1021,7 +1021,7 @@ int player_record(void *hplayer, char *file)
     return 0;
 }
 
-void player_textout(void *hplayer, int x, int y, int color, char *text)
+void player_textout(void *hplayer, int x, int y, int color, TCHAR *text)
 {
     void *vdev = NULL;
     player_getparam((void*)hplayer, PARAM_VDEV_GET_CONTEXT, &vdev);

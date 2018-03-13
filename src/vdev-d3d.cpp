@@ -36,7 +36,7 @@ static void d3d_draw_surf(VDEVD3DCTXT *c, LPDIRECT3DSURFACE9 surf)
                 RECT rect = { c->x, c->y, c->x + c->w, c->y + c->h };
                 if (c->textt && SUCCEEDED(c->pD3DDev->BeginScene())) {
                     RECT r = { c->textx, c->texty, rect.right, rect.bottom };
-                    c->d3dfont->DrawTextA(c->textt, -1, &r, 0, c->textc);
+                    c->d3dfont->DrawText(c->textt, -1, &r, 0, c->textc);
                     c->pD3DDev->EndScene();
                 }
                 c->pD3DDev->Present(NULL, &rect, NULL, NULL);
